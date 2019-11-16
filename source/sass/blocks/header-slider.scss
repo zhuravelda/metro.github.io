@@ -1,0 +1,35 @@
+.header-slider__item {
+    margin: 20px auto;
+    padding: 0;
+    border-radius: 20px;
+    position: relative;
+}
+
+.header-slider__item img {
+    margin: 0 auto;
+    height: 400px;
+}
+
+.header-slider__item-descr {
+    display: none;
+    text-align: center;
+}
+
+.header-slider {
+    padding: 0;
+    height: 600px;
+}
+
+.header-slider__item-title {
+    text-align: center;
+}
+
+.slick-center img {
+    height: 500px;
+    transition: 0.7s;
+  }
+
+  .slick-center .header-slider__item-descr {
+      display: block;
+      transition: 0.7s;
+  }
