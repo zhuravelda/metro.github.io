@@ -1,0 +1,32 @@
+.page-footer {
+    background-color: #156573;
+    padding: 20px 0;
+}
+
+.page-footer_contact {
+    margin-right: 20px;
+}
+
+.page-footer_contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.page-footer_social,
+.page-footer_contacts {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page-footer .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.page-footer_social a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}

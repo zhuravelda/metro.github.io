@@ -3,7 +3,7 @@
     padding: 0;
     border-radius: 20px;
     position: relative;
-}
+ }
 
 .header-slider__item img {
     margin: 0 auto;
@@ -18,14 +18,21 @@
 .header-slider {
     padding: 0;
     height: 600px;
+    background-color: rgba(13,101,116,0.4);
+    border-radius: 6px;
 }
 
 .header-slider__item-title {
     text-align: center;
 }
 
-.slick-center img {
+.slick-track .slick-center img {
     height: 500px;
+    transition: 0.7s;
+}
+  
+  .slick-active img {
+    height: 400px;
     transition: 0.7s;
   }
 
