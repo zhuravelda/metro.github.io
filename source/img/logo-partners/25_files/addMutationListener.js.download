@@ -1,0 +1,17 @@
+function addMutationListener(target, func) {
+
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            func(mutation);
+        });
+    });
+
+    var config = {
+        attributes: true,
+        childList: true,
+        characterData: true,
+        subtree: true
+    };
+
+    observer.observe(target, config);
+}

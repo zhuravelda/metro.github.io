@@ -1,0 +1,42 @@
+function opacityEffect(elementClass) {
+    var t, t2;
+    var obj = document.getElementsByClassName(elementClass);
+    var ap = this.appear = function() {
+        for (i = 0; i < obj.length; i++) {
+            var elItem = obj[i];
+            var op = (elItem.style.opacity) ? parseFloat(elItem.style.opacity) : parseInt(elItem.style.filter) / 100;
+            if (op < 1) {
+                clearTimeout(t2);
+                op += 0.05;
+                elItem.style.opacity = op;
+                elItem.style.filter = 'alpha(opacity=' + op * 100 + ')';
+                t = setTimeout(arguments.callee, 20);
+            }
+        }
+    };
+
+    var dis = this.disappear = function() {
+        for (i = 0; i < obj.length; i++) {
+            var elItem = obj[i];
+            var op = (elItem.style.opacity) ? parseFloat(elItem.style.opacity) : parseInt(elItem.style.filter) / 100;
+            if (op > 0.5) {
+                clearTimeout(t);
+                op -= 0.05;
+                elItem.style.opacity = op;
+                elItem.style.filter = 'alpha(opacity=' + op * 100 + ')';
+                t2 = setTimeout(arguments.callee, 20);
+            }
+        }
+    };
+
+    for (i = 0; i < obj.length; i++) {
+        var el = obj[i];
+        if (el.onmouseover === null) {
+            el.onmouseover = ap;
+            el.style.opacity = 0.5;
+        }
+        if (el.onmouseout === null) {
+            el.onmouseout = dis;
+        }
+    }
+}
