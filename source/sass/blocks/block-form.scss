@@ -1,0 +1,61 @@
+.block-form {
+    width: 50%;
+}
+
+.block-forms {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.block-forms p input,
+.block-forms p textarea {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #066C73;
+    border: none;
+    color: wheat;
+    border-radius: 2px;
+}
+
+.block-forms p ::placeholder {
+    color: wheat;
+}
+
+.block-forms .child-active {
+    margin-left: 45%;
+}
+
+.block-forms .child-active input {
+    font-family: 'Titillium Web', sans-serif;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: box-shadow ease-in-out 0.3s;
+    padding: 16px 32px;
+    box-shadow: 0px 26px 92px 3px rgba(0,0,0,0.2);
+    background-color: #58ba52;
+    border-color: #58ba52;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin: 0 0 0 18px;
+}
+
+.block-forms .child-active input:hover {
+    transition: 0.4s;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.block-forms .child-active input:active {
+    opacity: 0.9;
+}
